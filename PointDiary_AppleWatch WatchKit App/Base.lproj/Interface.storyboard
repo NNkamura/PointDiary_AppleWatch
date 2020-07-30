@@ -1,16 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="16097" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PointDiary_AppleWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <picker width="136" height="107" alignment="center" focusStyle="stack" id="Y4b-dQ-i8h"/>
+                        <button width="1" alignment="center" title="Button" id="l0k-5J-IDT"/>
+                        <table alignment="left" id="XDa-bG-1A4">
+                            <items>
+                                <tableRow identifier="FlightRow" id="gY0-sU-9YO" userLabel="PointRowController" customClass="PointRowController" customModule="PointDiary_AppleWatch_WatchKit_App" customModuleProvider="target">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="AJJ-II-u9v">
+                                        <items>
+                                            <label height="1" alignment="left" text="48" textAlignment="center" id="LZk-Vo-Nts"/>
+                                            <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="KE1-gz-2NJ">
+                                                <color key="color" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            </separator>
+                                            <group alignment="left" layout="vertical" spacing="0.0" id="6OG-Vu-EcF">
+                                                <items>
+                                                    <dateLabel alignment="left" id="Mxd-ao-SYg">
+                                                        <dateFormatterStyle key="dateStyle" medium="YES"/>
+                                                    </dateLabel>
+                                                    <dateLabel alignment="left" id="WD2-gr-5Yd">
+                                                        <dateFormatterStyle key="timeStyle" medium="YES"/>
+                                                    </dateLabel>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="dateLabel" destination="Mxd-ao-SYg" id="Fg4-Aw-VlK"/>
+                                        <outlet property="pointLabel" destination="LZk-Vo-Nts" id="5kj-U8-coE"/>
+                                        <outlet property="separator" destination="KE1-gz-2NJ" id="uvE-tD-p6p"/>
+                                        <outlet property="timeLabel" destination="WD2-gr-5Yd" id="JrU-XC-Bne"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="pointPicker" destination="Y4b-dQ-i8h" id="nlW-gK-iVt"/>
+                        <outlet property="pointTable" destination="XDa-bG-1A4" id="Ojc-Fc-zeh"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="220" y="338"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -32,14 +72,14 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="PointDiary_AppleWatch_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="PointDiary_AppleWatch_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>

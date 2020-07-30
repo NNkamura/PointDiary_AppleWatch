@@ -15,6 +15,8 @@
 		A2678F9924CED51B007F1A7D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2678F9824CED51B007F1A7D /* ExtensionDelegate.swift */; };
 		A2678F9B24CED51B007F1A7D /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2678F9A24CED51B007F1A7D /* NotificationController.swift */; };
 		A2678F9D24CED51C007F1A7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2678F9C24CED51C007F1A7D /* Assets.xcassets */; };
+		A269B08124CFB7D600A55C55 /* PointRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A269B08024CFB7D600A55C55 /* PointRowController.swift */; };
+		A269B08324CFBA1400A55C55 /* PointDiaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A269B08224CFBA1400A55C55 /* PointDiaryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		A2678F9C24CED51C007F1A7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2678F9E24CED51C007F1A7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2678F9F24CED51C007F1A7D /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		A269B08024CFB7D600A55C55 /* PointRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointRowController.swift; sourceTree = "<group>"; };
+		A269B08224CFBA1400A55C55 /* PointDiaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointDiaryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				A2678F9624CED51B007F1A7D /* InterfaceController.swift */,
+				A269B08224CFBA1400A55C55 /* PointDiaryModel.swift */,
 				A2678F9824CED51B007F1A7D /* ExtensionDelegate.swift */,
 				A2678F9A24CED51B007F1A7D /* NotificationController.swift */,
+				A269B08024CFB7D600A55C55 /* PointRowController.swift */,
 				A2678F9C24CED51C007F1A7D /* Assets.xcassets */,
 				A2678F9E24CED51C007F1A7D /* Info.plist */,
 				A2678F9F24CED51C007F1A7D /* PushNotificationPayload.apns */,
@@ -254,7 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A269B08324CFBA1400A55C55 /* PointDiaryModel.swift in Sources */,
 				A2678F9B24CED51B007F1A7D /* NotificationController.swift in Sources */,
+				A269B08124CFB7D600A55C55 /* PointRowController.swift in Sources */,
 				A2678F9924CED51B007F1A7D /* ExtensionDelegate.swift in Sources */,
 				A2678F9724CED51B007F1A7D /* InterfaceController.swift in Sources */,
 			);

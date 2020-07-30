@@ -12,19 +12,40 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var pointPicker: WKInterfacePicker!
+    @IBOutlet weak var pointTable: WKInterfaceTable!
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+
+        var pointList:[String] = [String]()
+        for i in 0 ..< 101 {
+            pointList.append(String(i))
+        }
+        
+        let pickerItems: [WKPickerItem] = pointList.map {
+            let pickerItem = WKPickerItem()
+            pickerItem.title = $0
+            return pickerItem
+        }
+        pointPicker.setItems(pickerItems)
+
+//        pointTable.setNumberOfRows(flights.count, withRowType: "FlightRow")
+//
+//        for index in 0..<pointTable.numberOfRows {
+//          guard let controller = flightsTable.rowController(at: index) as? FlightRowController else { continue }
+//
+//          controller.flight = flights[index]
+//        }
     }
     
+    
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
     
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
 
