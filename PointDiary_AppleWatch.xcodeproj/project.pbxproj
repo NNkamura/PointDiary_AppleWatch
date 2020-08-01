@@ -122,10 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				A2678F9624CED51B007F1A7D /* InterfaceController.swift */,
-				A269B08224CFBA1400A55C55 /* PointDiaryModel.swift */,
-				A2678F9824CED51B007F1A7D /* ExtensionDelegate.swift */,
-				A2678F9A24CED51B007F1A7D /* NotificationController.swift */,
 				A269B08024CFB7D600A55C55 /* PointRowController.swift */,
+				A269B08224CFBA1400A55C55 /* PointDiaryModel.swift */,
+				A2678F9A24CED51B007F1A7D /* NotificationController.swift */,
+				A2678F9824CED51B007F1A7D /* ExtensionDelegate.swift */,
 				A2678F9C24CED51C007F1A7D /* Assets.xcassets */,
 				A2678F9E24CED51C007F1A7D /* Info.plist */,
 				A2678F9F24CED51C007F1A7D /* PushNotificationPayload.apns */,

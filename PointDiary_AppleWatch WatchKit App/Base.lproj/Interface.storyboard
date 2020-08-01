@@ -15,19 +15,19 @@
                         <button width="1" alignment="center" title="Button" id="l0k-5J-IDT"/>
                         <table alignment="left" id="XDa-bG-1A4">
                             <items>
-                                <tableRow identifier="FlightRow" id="gY0-sU-9YO" userLabel="PointRowController" customClass="PointRowController" customModule="PointDiary_AppleWatch_WatchKit_App" customModuleProvider="target">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="AJJ-II-u9v">
+                                <tableRow identifier="FlightRow" id="Xdj-J2-Fff" userLabel="PointRowController" customClass="PointRowController" customModule="PointDiary_AppleWatch_WatchKit_App" customModuleProvider="target">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="B4D-dR-Ggi">
                                         <items>
-                                            <label height="1" alignment="left" text="48" textAlignment="center" id="LZk-Vo-Nts"/>
-                                            <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="KE1-gz-2NJ">
+                                            <label height="1" alignment="left" text="48" textAlignment="center" id="8c9-h3-4hd"/>
+                                            <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="SBt-Zo-QcA">
                                                 <color key="color" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                             </separator>
-                                            <group alignment="left" layout="vertical" spacing="0.0" id="6OG-Vu-EcF">
+                                            <group alignment="left" layout="vertical" spacing="0.0" id="wkO-QJ-h5n">
                                                 <items>
-                                                    <dateLabel alignment="left" id="Mxd-ao-SYg">
+                                                    <dateLabel alignment="left" id="wIu-hF-T6z">
                                                         <dateFormatterStyle key="dateStyle" medium="YES"/>
                                                     </dateLabel>
-                                                    <dateLabel alignment="left" id="WD2-gr-5Yd">
+                                                    <dateLabel alignment="left" id="JJi-hu-PCl">
                                                         <dateFormatterStyle key="timeStyle" medium="YES"/>
                                                     </dateLabel>
                                                 </items>
@@ -35,10 +35,9 @@
                                         </items>
                                     </group>
                                     <connections>
-                                        <outlet property="dateLabel" destination="Mxd-ao-SYg" id="Fg4-Aw-VlK"/>
-                                        <outlet property="pointLabel" destination="LZk-Vo-Nts" id="5kj-U8-coE"/>
-                                        <outlet property="separator" destination="KE1-gz-2NJ" id="uvE-tD-p6p"/>
-                                        <outlet property="timeLabel" destination="WD2-gr-5Yd" id="JrU-XC-Bne"/>
+                                        <outlet property="dateLabel" destination="wIu-hF-T6z" id="B1x-TT-vZe"/>
+                                        <outlet property="pointLabel" destination="8c9-h3-4hd" id="NbF-9V-vRh"/>
+                                        <outlet property="timeLabel" destination="JJi-hu-PCl" id="tAQ-Fh-Str"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -46,7 +45,7 @@
                     </items>
                     <connections>
                         <outlet property="pointPicker" destination="Y4b-dQ-i8h" id="nlW-gK-iVt"/>
-                        <outlet property="pointTable" destination="XDa-bG-1A4" id="Ojc-Fc-zeh"/>
+                        <outlet property="pointTable" destination="XDa-bG-1A4" id="ium-nG-nN1"/>
                     </connections>
                 </controller>
             </objects>

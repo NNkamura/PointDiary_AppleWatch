@@ -12,21 +12,11 @@ class PointRowController: NSObject {
     @IBOutlet var pointLabel: WKInterfaceLabel!
     @IBOutlet var dateLabel: WKInterfaceDate!
     @IBOutlet var timeLabel: WKInterfaceDate!
-
-//  var flight: Flight? {
-//    didSet {
-//      guard let flight = flight else { return }
-//
-//      originLabel.setText(flight.origin)
-//      destinationLabel.setText(flight.destination)
-//      flightNumberLabel.setText(flight.number)
-//
-//      if flight.onSchedule {
-//        statusLabel.setText("On Time")
-//      } else {
-//        statusLabel.setText("Delayed")
-//        statusLabel.setTextColor(.red)
-//      }
-//    }
-//  }
+    
+    
+    func setInit(point: String){//, date1: Calendar, date2: Calendar) {
+        pointLabel.setText(point)
+        dateLabel.setCalendar(Calendar.current)
+        timeLabel.setCalendar(Calendar.current)
+    }
 }
