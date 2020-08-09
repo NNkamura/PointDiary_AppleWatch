@@ -26,7 +26,7 @@
                                 <tableRow identifier="PointRowController" id="Xdj-J2-Fff" userLabel="PointRowController" customClass="PointRowController" customModule="PointDiary_AppleWatch_WatchKit_App" customModuleProvider="target">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="B4D-dR-Ggi">
                                         <items>
-                                            <label height="1" alignment="left" textAlignment="center" id="8c9-h3-4hd"/>
+                                            <label width="24" height="1" alignment="left" textAlignment="center" id="8c9-h3-4hd"/>
                                             <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="SBt-Zo-QcA">
                                                 <color key="color" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                             </separator>

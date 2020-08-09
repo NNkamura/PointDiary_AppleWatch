@@ -27,8 +27,9 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func doneButtonAction() {
-        PointDiaryModel.donePointDairy(point: String(selectedPickerIndex))
-        viewPointDiaryModels = PointDiaryModel.getPointDairy()
+        if PointDiaryModel.shared.donePointDairy(point: String(selectedPickerIndex)){
+            viewPointDiaryModels = PointDiaryModel.shared.getPointDairy()
+        }
     }
     
     override func awake(withContext context: Any?) {
@@ -49,15 +50,19 @@ class InterfaceController: WKInterfaceController {
         }
         pointPicker.setItems(pickerItems)
         
-        viewPointDiaryModels = PointDiaryModel.getPointDairy()
+        viewPointDiaryModels = PointDiaryModel.shared.getPointDairy()
     }
     
     private func pointTableViewReload(){
+        let sortedViewPointDiaryModels = viewPointDiaryModels.sorted(by: { a, b -> Bool in
+            return a.date > b.date
+        })
+        
         pointTable.setNumberOfRows(viewPointDiaryModels.count, withRowType: "PointRowController")
         
         for index in 0..<pointTable.numberOfRows {
             guard let controller = pointTable.rowController(at: index) as? PointRowController else { continue }
-            controller.setInit(point: viewPointDiaryModels[index].point, date: viewPointDiaryModels[index].date)
+            controller.setInit(point: sortedViewPointDiaryModels[index].point, date: sortedViewPointDiaryModels[index].date)
         }
     }
     
