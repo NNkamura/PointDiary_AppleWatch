@@ -11,33 +11,37 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PointDiary_AppleWatch_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <picker width="136" height="107" alignment="center" focusStyle="stack" id="Y4b-dQ-i8h"/>
-                        <button width="1" alignment="center" title="Button" id="l0k-5J-IDT"/>
+                        <picker width="136" height="107" alignment="center" focusStyle="stack" id="Y4b-dQ-i8h">
+                            <connections>
+                                <action selector="pickerAction:" destination="AgC-eL-Hgc" id="Nif-LH-XCP"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="center" title="Done" id="l0k-5J-IDT">
+                            <connections>
+                                <action selector="doneButtonAction" destination="AgC-eL-Hgc" id="1sV-bl-fod"/>
+                            </connections>
+                        </button>
                         <table alignment="left" id="XDa-bG-1A4">
                             <items>
-                                <tableRow identifier="FlightRow" id="Xdj-J2-Fff" userLabel="PointRowController" customClass="PointRowController" customModule="PointDiary_AppleWatch_WatchKit_App" customModuleProvider="target">
+                                <tableRow identifier="PointRowController" id="Xdj-J2-Fff" userLabel="PointRowController" customClass="PointRowController" customModule="PointDiary_AppleWatch_WatchKit_App" customModuleProvider="target">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="B4D-dR-Ggi">
                                         <items>
-                                            <label height="1" alignment="left" text="48" textAlignment="center" id="8c9-h3-4hd"/>
+                                            <label height="1" alignment="left" textAlignment="center" id="8c9-h3-4hd"/>
                                             <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="SBt-Zo-QcA">
                                                 <color key="color" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                             </separator>
                                             <group alignment="left" layout="vertical" spacing="0.0" id="wkO-QJ-h5n">
                                                 <items>
-                                                    <dateLabel alignment="left" id="wIu-hF-T6z">
-                                                        <dateFormatterStyle key="dateStyle" medium="YES"/>
-                                                    </dateLabel>
-                                                    <dateLabel alignment="left" id="JJi-hu-PCl">
-                                                        <dateFormatterStyle key="timeStyle" medium="YES"/>
-                                                    </dateLabel>
+                                                    <label alignment="left" id="Y6E-tw-xa8"/>
+                                                    <label alignment="left" id="g6u-oO-Osa"/>
                                                 </items>
                                             </group>
                                         </items>
                                     </group>
                                     <connections>
-                                        <outlet property="dateLabel" destination="wIu-hF-T6z" id="B1x-TT-vZe"/>
+                                        <outlet property="dayLabel" destination="Y6E-tw-xa8" id="RgQ-z9-GcV"/>
                                         <outlet property="pointLabel" destination="8c9-h3-4hd" id="NbF-9V-vRh"/>
-                                        <outlet property="timeLabel" destination="JJi-hu-PCl" id="tAQ-Fh-Str"/>
+                                        <outlet property="timeLabel" destination="g6u-oO-Osa" id="Wub-4a-lVn"/>
                                     </connections>
                                 </tableRow>
                             </items>

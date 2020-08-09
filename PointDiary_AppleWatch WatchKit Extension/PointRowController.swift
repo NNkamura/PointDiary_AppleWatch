@@ -10,13 +10,23 @@ import WatchKit
 
 class PointRowController: NSObject {
     @IBOutlet var pointLabel: WKInterfaceLabel!
-    @IBOutlet var dateLabel: WKInterfaceDate!
-    @IBOutlet var timeLabel: WKInterfaceDate!
+    @IBOutlet var dayLabel: WKInterfaceLabel!
+    @IBOutlet var timeLabel: WKInterfaceLabel!
     
     
-    func setInit(point: String){//, date1: Calendar, date2: Calendar) {
+    func setInit(point: String, date: Date) {
+        let formatterDay = DateFormatter()
+        formatterDay.timeStyle = .none
+        formatterDay.dateStyle = .long
+        formatterDay.locale = Locale(identifier: "ja_JP")
+        
+        let formatterTime = DateFormatter()
+        formatterTime.timeStyle = .long
+        formatterTime.dateStyle = .none
+        formatterTime.locale = Locale(identifier: "ja_JP")
+        
         pointLabel.setText(point)
-        dateLabel.setCalendar(Calendar.current)
-        timeLabel.setCalendar(Calendar.current)
+        dayLabel.setText(formatterDay.string(from: date))
+        timeLabel.setText(formatterTime.string(from: date))
     }
 }

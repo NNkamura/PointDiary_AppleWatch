@@ -9,47 +9,45 @@
 import Foundation
 import WatchKit
 
-class PointDiary {
-    
+struct PointDiary:Codable {
     let point: String
     let date: Date
+}
+
+class PointDiaryModel {
     
-    //  class func allPointDiarys() -> [PointDiary] {
-    //    var pointDiarys: [PointDiary] = []
-    //    let formatter = DateFormatter()
-    //    formatter.dateFormat = "HH:mm"
-    //
-    ////    guard let path = Bundle.main.path(forResource: "Flights", ofType: "json"),
-    ////      let data = try? Data(contentsOf: URL(fileURLWithPath: path)) else {
-    ////        return flights
-    ////    }
-    //
-    ////    do {
-    ////      let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [[String: String]]
-    ////      json.forEach({ (dict: [String: String]) in
-    ////        flights.append(Flight(dictionary: dict, formatter: formatter))
-    ////      })
-    ////    } catch let error as NSError {
-    ////      print(error)
-    ////    }
-    ////
-    ////    return flights
-    //  }
-    
-    init(point: String, date: Date) {
-        self.point = point
-        self.date = date
+    class func donePointDairy(point: String){
+        let pointDiary = PointDiary(point:point,date:Date())
+        
+        let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .iso8601
+        do {
+            let data = try encoder.encode(pointDiary)
+            let jsonstr:String = String(data: data, encoding: .utf8)!
+            print(jsonstr)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
-    //  convenience init(dictionary: [String: String], formatter: DateFormatter) {
-    //    let origin = dictionary["origin"]!
-    //    let destination = dictionary["destination"]!
-    //    let number = dictionary["number"]!
-    //    let boardsAt = formatter.string(from: Date().addingTimeInterval(Double(arc4random_uniform(21600) + 1800)))
-    //    let delayed = dictionary["delayed"]!
-    //    let gate = dictionary["gate"]!
-    //    let row = ["A", "B", "C", "D", "E", "F", "G"]
-    //    let seat = "\(arc4random_uniform(40) + 1)\(row[Int(arc4random_uniform(UInt32(row.count)))])"
-    //    self.init(origin: origin, destination: destination, number: number, boardsAt: boardsAt, delayed: delayed, gate: gate, seat: seat)
-    //  }
+    
+    class func getPointDairy() -> [PointDiary]{
+        
+        let jsonstr = """
+        {
+        "point" : "43",
+        "date" : "2018-01-08T03:24:12Z"
+        }
+        """
+        let decoder: JSONDecoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        do {
+            let decoded: PointDiary = try decoder.decode(PointDiary.self, from: jsonstr.data(using: .utf8)!)
+            print(decoded)
+            return [decoded]
+        } catch {
+            print(error.localizedDescription)
+            return []
+        }
+    }
 }
